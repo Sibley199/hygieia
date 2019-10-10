@@ -1,0 +1,8 @@
+queue:
+- name: sitemaps
+  rate: 5/s
+  max_concurrent_requests: 5
+
+
+- name: recipe
+  rate: 10/s

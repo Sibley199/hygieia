@@ -1,0 +1,4 @@
+cron:
+- description: "Scrape sitemaps monthly"
+  url: /cron/scrape/sitemap
+  schedule: 1 of month 00:00
