@@ -1,0 +1,20 @@
+runtime: go
+api_version: go1
+
+handlers:
+- url: /api.*
+  script: _go_app
+
+- url: /cron.*
+  script: _go_app
+
+- url: /(.*\.(css|gif|png|jpg|ico|js|html))
+  static_files: ui/src/\1
+  upload: ui/src/(.*\.(css|gif|png|jpg|ico|js|html))
+
+# All URLs are handled by the Go application script
+- url: /.*
+  static_files: ui/src/index.html
+  upload: ui/src/index.html
+
+
